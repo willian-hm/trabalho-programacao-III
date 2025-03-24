@@ -8,14 +8,18 @@
     "4 - Dar tchau\n\n";
     $numero = readline();
 
-if ($numero == "1") {
-    echo "Seja Bem Vindo $nome";
-} else if ($numero == "2") {
-    echo "Só se vive uma vez, então taca o fds e mete o loco";
-} else if ($numero == "3") {
-    echo "Não morra (opcional)";
-} else if ($numero == "4") {
-    echo "Tchau $nome";
-} else {
-    echo "Error 404!";
-}
+do {
+    if ($numero == "1") {
+        echo "Seja Bem Vindo $nome";
+    } else if ($numero == "2") {
+        echo "Só se vive uma vez, então taca o fds e mete o loco";
+    } else if ($numero == "3") {
+        echo "Não morra (opcional)";
+    } else if ($numero == "4") {
+        echo "Tchau $nome";
+    } else {
+        echo "Error 404!";
+    }
+}while ($numero != 4);
+
+?>
