@@ -8,14 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="w-50 p-3 m-auto my-5 border border-secondary rounded-2">
-
-        <form action="principal.php">
-            Nome: <input type="text" name="nome"><br>
-            Idade: <input type="text" name="idade"><br>
-            <button type="submit">Entrar</button>
-        </form>
-
-    </main>
+    <ul class="list-group">
+        <?php
+            $disciplinasTerceiro = ["Português", "Matemática", "Inglês", "Física", "Química", "Biologia", "Programação 2", "Sociologia", "Geografia", "História",
+            "DPI", "Ed Física", "Empreendedorismo", "Optativa"];
+            
+            for ($i = 0; $i < count($disciplinasTerceiro); $i++) {
+            ?>
+                <li class="list-group-item"><?php 
+                 echo $disciplinasTerceiro[$i]; 
+                ?></li>
+            <?php            
+            }
+            ?>
+    </ul>
 </body>
 </html>
