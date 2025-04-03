@@ -15,17 +15,41 @@
 <body>
     <header class="w-100 p-5 mb-4 bg-primary">
         <h4 class="text-light text-center">Super Lojão</h4>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">                     
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Categorias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                    $menu = ["AudioVisual", "Antiguidades", "Tecnologias", "Outros"];
+                                    for ($i = 0; $i < count($menu); $i++) {
+                                    ?>
+                                        <li><a class="dropdown-item" href="#"><?= $menu[$i] ?></a></li>
+                                    <?php
+                                    }
+                                ?>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="w-75 border border-2 border-dark p-5 m-auto">
+    <main class="w-75 border border-2 border-dark p-5 m-auto row">
         <?php
         $produtos = ["Telefone Fixo", "Fax", "TV de Tubo", "Máquina de Escrever", "Video Cassete", "Vitrola"];
         $cor = ["text-warning", "text-danger", "text-info", "text-primary", "text-success", "text-secondary"];
 
         for ($i = 0; $i < count($produtos); $i++) {
             ?>
-            <div class="card" style="width: 18rem;">
-                <img src="img/<?= $i?>.jpg" class="card-img-top" alt="...">
+            <div class="card mx-2 my-2" style="width: 18rem;">
+                <img src="img/<?= $i ?>.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <p class="fs-4 card-text <?= $cor[$i] ?>"><?= $produtos[$i]; ?></p>
                 </div>
