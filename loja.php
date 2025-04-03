@@ -41,8 +41,9 @@
         </nav>
     </header>
 
-    <main class="w-75 border border-2 border-dark p-5 m-auto row">
-        <?php
+    <main class="w-75 border border-2 border-dark p-5 m-auto">
+    <div class="row">
+    <?php
         $produtos = ["Telefone Fixo", "Fax", "TV de Tubo", "Máquina de Escrever", "Video Cassete", "Vitrola"];
         $cor = ["text-warning", "text-danger", "text-info", "text-primary", "text-success", "text-secondary"];
 
@@ -57,7 +58,8 @@
             <?php
         }
 
-        ?>
+        ?>                              
+    </div>
     </main>
 </body>
 
