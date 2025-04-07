@@ -46,14 +46,18 @@
     <?php
         $produtos = ["Telefone Fixo", "Fax", "TV de Tubo", "Máquina de Escrever", "Video Cassete", "Vitrola"];
         $cor = ["text-warning", "text-danger", "text-info", "text-primary", "text-success", "text-secondary"];
+        $link = [ "https://www.amazon.com.br/s?k=telefone+fixo", "https://www.amazon.com.br/s?k=fax", "https://www.amazon.com.br/s?k=tv+de+tubo", 
+        "https://www.amazon.com.br/s?k=m%C3%A1quina+de+escrever", "https://www.amazon.com.br/s?k=video+cassete", "https://www.amazon.com.br/s?k=vitrola"];
 
         for ($i = 0; $i < count($produtos); $i++) {
             ?>
-            <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="img/<?= $i ?>.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="fs-4 card-text <?= $cor[$i] ?>"><?= $produtos[$i]; ?></p>
-                </div>
+            <div class="card mx-2 my-2 btn btn-light " style="width: 18rem;">
+                <a target="_blank" href="<?= $link[$i] ?>">
+                    <img src="img/<?= $i ?>.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="fs-4 card-text <?= $cor[$i] ?>"><?= $produtos[$i]; ?></p>
+                    </div>
+                </a>
             </div>
             <?php
         }
