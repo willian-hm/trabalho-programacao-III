@@ -12,8 +12,8 @@
         crossorigin="anonymous"></script>
 
 <body class="container mt-5 w-75">
-    <header class="bg-warning my-5 w-75">
-        <h2 class="text center p-5">Olivide - Classificação Final</h2>
+    <header class="bg-warning my-5 w-100 me-auto">
+        <h2 class="text-center p-5">Olivide - Classificação Final</h2>
     </header>
     <main>
         <table class="table table-striped">
